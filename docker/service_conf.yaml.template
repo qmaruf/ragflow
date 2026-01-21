@@ -52,11 +52,18 @@ redis:
   username: '${REDIS_USERNAME:-}'
   password: '${REDIS_PASSWORD:-infini_rag_flow}'
   host: '${REDIS_HOST:-redis}:6379'
+
+
+
 user_default_llm:
+  factory: 'Ollama'  
+  base_url: 'http://host.docker.internal:11434'
   default_models:
+    chat_model:
+      name: 'phi4-mini'                  
     embedding_model:
-      api_key: 'xxx'
-      base_url: 'http://${TEI_HOST}:80'
+      name: 'nomic-embed-text:v1.5'   
+
 # postgres:
 #   name: '${POSTGRES_DBNAME:-rag_flow}'
 #   user: '${POSTGRES_USER:-rag_flow}'
