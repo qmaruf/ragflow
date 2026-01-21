@@ -56,11 +56,11 @@ redis:
 
 
 user_default_llm:
-  factory: 'Ollama'  
+  factory: 'Ollama'
   base_url: 'http://host.docker.internal:11434'
   default_models:
     chat_model:
-      name: 'phi4-mini'                  
+      name: 'phi4-mini:latest'
     embedding_model:
       name: 'nomic-embed-text:v1.5'   
 

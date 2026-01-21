@@ -46,11 +46,22 @@ redis:
   host: 'localhost:6379'
 task_executor:
   message_queue_type: 'redis'
+# user_default_llm:
+#   default_models:
+#     embedding_model:
+#       api_key: 'xxx'
+#       base_url: 'http://localhost:6380'
+
+
 user_default_llm:
+  factory: 'Ollama'
+  base_url: 'http://host.docker.internal:11434'
   default_models:
+    chat_model:
+      name: 'phi4-mini:latest'
     embedding_model:
-      api_key: 'xxx'
-      base_url: 'http://localhost:6380'
+      name: 'nomic-embed-text:v1.5'   
+
 # postgres:
 #   name: 'rag_flow'
 #   user: 'rag_flow'

@@ -916,7 +916,7 @@
             "rank": "830",
             "llm": [
                 {
-                    "llm_name": "phi4-mini",
+                    "llm_name": "phi4-mini:latest",
                     "tags": "LLM,CHAT",
                     "max_tokens": 10240,
                     "model_type": "chat"
