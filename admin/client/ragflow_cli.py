@@ -906,7 +906,7 @@ class RAGFlowCLI(Cmd):
         role: str = command["role"]
         print(f"Create user: {user_name}, password: ******, role: {role}")
         url = f"http://{self.host}:{self.port}/api/v1/admin/users"
-        response = self.session.post(url, json={"user_name": user_name, "password": encrypt(password), "role": role})
+        response = self.session.post(url, json={"username": user_name, "password": encrypt(password), "role": role})
         res_json = response.json()
         if response.status_code == 200:
             self._print_table_simple(res_json["data"])
